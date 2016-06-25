@@ -33,6 +33,7 @@ Pausing within language production can also be especially informative. A pause c
 Given that the dynamics of typing can provide such a large amount of information, many researchers have devised methods to visualize a typing session. For a recent overview, see Becotte, et al. (in press). Many of the visualization techniques proposed for the typing process are limited to the “what” of typing, i.e. which keys were pressed and in what order. Some visualizations do focus on the rate of typing, which is reflected as a line chart where a steeper slope reflects a more rapid typing rate. This is illustrated in Figure 1, which is an example of an LS Graph (Lindgren & Sullivan, 2002). However, this visualization I only a continuous line, and lacks a discrete representation of separate words.
 
 ![](http://i.imgur.com/p3bsHbG.png "LS Graph")
+
 *Figure 1 - Linear representation of the typing production process*
 
 One visualization technique that does represent word tokens can be seen in Figure 2 (Caporossi & Leblay, 2011). While the discrete nodes show word tokens as well as the relationship between the order in which tokens were produced, this visualization fails to capture the temporal dynamics or varying rates of the LS Graph. In fact, the x,y coordinates of this graph are completely irrelevant, and are only arranged as below for a compact visualization.
