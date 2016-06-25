@@ -155,7 +155,7 @@ Ultimately, the goal of understanding language production is to understand how t
 
 #### Acknowledgements
 
-TO DO!!!
+Raw data for this project was collected and rigorously sanitized by Lousisiana Tech University. In particular, this was orchestrated by Dr. Vir Proha, Dr. Kiran Balagani (NYIT) and Dr. Mike O'Neal. This work was supported in part by DARPA Active Authentication grants FA8750-12-2-0201 and FA8750-13-2-0274. The views, findings, recommendations, and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies or endorsements, either expressed or implied, of the sponsoring agencies or the U.S. Government.
 
 #### Bibliography
 
