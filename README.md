@@ -33,12 +33,12 @@ Pausing within language production can also be especially informative. A pause c
 Given that the dynamics of typing can provide such a large amount of information, many researchers have devised methods to visualize a typing session. For a recent overview, see Becotte, et al. (in press). Many of the visualization techniques proposed for the typing process are limited to the “what” of typing, i.e. which keys were pressed and in what order. Some visualizations do focus on the rate of typing, which is reflected as a line chart where a steeper slope reflects a more rapid typing rate. This is illustrated in Figure 1, which is an example of an LS Graph (Lindgren & Sullivan, 2002). However, this visualization I only a continuous line, and lacks a discrete representation of separate words.
 
 ![](http://i.imgur.com/p3bsHbG.png "LS Graph")
-Figure 1 - Linear representation of the typing production process
+*Figure 1 - Linear representation of the typing production process*
 
 One visualization technique that does represent word tokens can be seen in Figure 2 (Caporossi & Leblay, 2011). While the discrete nodes show word tokens as well as the relationship between the order in which tokens were produced, this visualization fails to capture the temporal dynamics or varying rates of the LS Graph. In fact, the x,y coordinates of this graph are completely irrelevant, and are only arranged as below for a compact visualization.
 
 ![](http://i.imgur.com/atHJTg2.png "Nodes")
-Figure 2 - Graph representation of the online writing process
+*Figure 2 - Graph representation of the online writing process*
 
 TypeShift attempts to synthesize the best aspects of the visualization techniques mentioned above. It captures both the temporal rate of language production, and highlights the discrete nature of word tokens.
 
@@ -64,7 +64,7 @@ In order to allow for typing sessions of different time lengths to be compared, 
 The TypeShift tool was designed using the shiny Web Application Interface for R (Chang, et al. 2016). This allows for rapid prototyping as well as rapid deployment. The tool allows a user to select exactly which typing session to visualize, as well as which aspects of a typing session to include in the visualization.
 
 ![](http://i.imgur.com/By5Q9hH.png "UI")
-Figure 3 - Screenshot of the TypeShift User Interface
+*Figure 3 - Screenshot of the TypeShift User Interface*
 
 The menu on the side provides a number of options:
 
@@ -87,32 +87,32 @@ Finally, a user can click on a particular token to see a detailed view of that t
 The advantages of the TypeShift tool can be understood better through example. The examples below highlight how TypeShift can bring to light certain key attributes of a typist or typing session.
 
 ![Imgur](http://i.imgur.com/2n0g55I.png)
-Figure 4 – Average typing session for a slow typist
+*Figure 4 – Average typing session for a slow typist*
 
 Figure 4 illustrates the importance of comparing a typing session not only to the overall mean, but to the within-subject mean, as well. Compared to the overall population, this typing session would be considered average. However, for this typist, this particular session is actually very rapidly paced. If a researcher were trying to understand this particular typist, this visualization helps show that this is not a typical typing session for this typist.
 
 ![](http://i.imgur.com/pvhBucF.png)
-Figure 5 - Slow but steadily-paced typist, with typing bursts
+*Figure 5 - Slow but steadily-paced typist, with typing bursts*
 
 Figure 5 illustrates a typist who is slow, but types in bursts at a relatively constant rate. The overall constant rate is illustrated by the uniform slope of the plot, along with similarly sized and colored points. The burstiness of the typing session is illustrated by the large gaps in the plot.
 
 ![](http://i.imgur.com/mEUPNOm.png)
-Figure 6 - Inconsistent typing rate
+*Figure 6 - Inconsistent typing rate*
 
 Figure 6 illustrates a typist with a more inconsistent typing rate. This can be seen by the varying slope of the plot, along with the varying colors and sizes of the tokens. Not only is the typist’s overall rate inconsistent, but he types different tokens at very different rates, as well.
 
 ![](http://i.imgur.com/AbHlkAP.png)
-Figure 7 - Heavy revising causes changes in typing dynamics
+*Figure 7 - Heavy revising causes changes in typing dynamics*
 
 Figure 7 is a non-native English speaker, and looks very different than the previous plots. This typist makes a number of large revisions. After the revision, there is often a pause or a change in typing rate.
 
 ![](http://i.imgur.com/NuFL0fn.png)
-Figure 8 - Typist starts steadily, then after revisions slows down and pauses
+*Figure 8 - Typist starts steadily, then after revisions slows down and pauses*
 
 Figure 8 is also a non-native English speaker. The plot illustrates how the typist starts out at a constant rate. However, after a few revisions in close succession, the typing rate changes and the typist exhibits protracted pauses.
 
 ![](http://i.imgur.com/KfqA5mO.png)
-Figure 9 - Faster than average typists that stays consistent
+*Figure 9 - Faster than average typists that stays consistent*
 
 Figure 9 is a faster-than-average typist, as illustrated by the steeper slope of the user trend line (orange), as compared to the overall trend line (red). Further, this particular session is fast-paced, even for this typist. Unlike Figure 4, where revisions are a catalyst for a change in typing rate, this more proficient typist is not as affected by revising. Rather, the typist maintains a steady rate, despite frequent revisions.
 
@@ -120,7 +120,7 @@ In addition to comparing typing rates, being able to filter for only certain typ
 
 ![](http://i.imgur.com/FSxedFn.png)           | ![](http://i.imgur.com/4eJCAZs.png) 
 :-------------------------:|:-------------------------:
-Figure 10a – Verbs only  |  Figure 10b – Nouns only
+*Figure 10a – Verbs only*|*Figure 10b – Nouns only*
 
 As can be seen in Figures 10a and 10b, this user types verbs at a faster rate than she types nouns. This could point to the importance of taking into consideration latent linguistic structure when analyzing a typist’s performance. By being able to filter, a user of TypeShift can perform a more direct comparison.
 
@@ -128,12 +128,12 @@ Similarly, Figures 11a and 11b below demonstrate how differently a user types fu
 
 ![](http://i.imgur.com/MvP8Dy5.png)| ![](http://i.imgur.com/rqWQcxH.png) 
 :-------------------------:|:-------------------------:
-Figure 11a – Function words only|Figure 11b – Content words only
+*Figure 11a – Function words only*|*Figure 11b – Content words only*
 
 Finally, a user of TypeShift can zoom into a particular word token. The red scatterplot represents the selected typist’s pauses, while the boxplots represent the overall population distribution of pauses. In Figure 12, the subject is a native Russian speaker. As can be seen, the pause before the initial character is more protracted, although the subsequent pauses are very near the population medians. Perhaps this typist had difficultly initially selecting and retrieving the word. However, once the word was retrieved from memory, it could be produced at an average rate.
 
 ![](http://i.imgur.com/KdCyRSr.png)
-Figure 12 - Pre-character pauses for each keystroke in the token "these"
+*Figure 12 - Pre-character pauses for each keystroke in the token "these"*
 
 #### Conclusion
 
