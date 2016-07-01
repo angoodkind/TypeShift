@@ -1,6 +1,16 @@
 ### TypeShift: A User Interface for Visualizing the Typing Production Process
 ### https://angoodkind.shinyapps.io/TypeShift/
 
+## Contents
+ - [Introduction](#introduction)
+ - [Background](#background)
+ - [Methodology](#methodology)
+ - [TypeShift User Interface](#typeshift-user-interface)
+ - [Illustrative Examples](#illustrative-examples)
+ - [Conclusion](#conclusion)
+ - [Guide to Source Code and Data](#guide-to-source-code-and-data)
+ - [Bibliography](#bibliography)
+
 #### Introduction
 The task of “visualizing language production” is both broad and difficult to execute conclusively. Common visualizations relating to language production include word clouds and frequency counts. These summary visualizations, however, only provide a static picture of language. They do not capture the dynamics elements that go into the process of language production, however.
 
@@ -152,9 +162,57 @@ Further, it is often difficult and counterproductive to attempt to use a single 
 
 Ultimately, the goal of understanding language production is to understand how the mind categorizes and processes information. By allowing a user to better visualize and compare typing sessions, hopefully more rapid progress can be made towards conceptualizing information transmission.
 
-#### Acknowledgements
+##### Acknowledgements
 
 Raw data for this project was collected and rigorously sanitized by Lousisiana Tech University. In particular, this was orchestrated by Dr. Vir Proha, Dr. Kiran Balagani (NYIT) and Dr. Mike O'Neal. This work was supported in part by DARPA Active Authentication grants FA8750-12-2-0201 and FA8750-13-2-0274. The views, findings, recommendations, and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies or endorsements, either expressed or implied, of the sponsoring agencies or the U.S. Government.
+
+#### Guide to Source Code and Data
+
+The Shiny app consists of the standard three R files, `global.R`, `server.R` and `ui.R`. These are used in a conventional format, and relatively unexceptional.
+
+Information about the typing data as well as the questions/answers and subject data is also included in csv format. The csv files are outlined below:
+
+ - answer_data.csv - the text of the answers, along with the subject_id and question_id for cross-referencing
+ - user_data.csv - information avout each user, as outline below; use subject_id to cross-reference
+ - question_data.csv - data about the questions/prompts that were presented to the users; use question_id for cross-referencing
+
+##### Answer Data
+ - Subject_id - a unique ID# assigned to each subject
+ - Questions_id - a unique ID# assigned to each question/prompt (30 in total)
+ - FinalText - The text string of the user's answer
+
+##### User Data
+ - Subject_id - a unique ID# assigned to each subject
+ 
+[For all of the below, some are blank, as subject's chose not to answer]
+ - Age - subject's age
+ - Gender - "m" or "f"
+ - Height - in inches
+ - Ethnicity - African American, Caucasian, etc. 
+ - FirstLanguage - native tongue
+ - PrimaryLanguage - language used now
+ - Major - college major
+ - DominantHand - "l","r", or "a" for ambidextrous [David and I are very suspect of the people who reported "ambidextrous." There is an unusually high number.]
+ - AvgHoursTyping - 0-1, 2-4, 5-7, 8-12, 12+ [note: this tends to correlate with typing speed]
+ - VisualTypist - "y" or "n", whether they look at their hands when typing (as opposed to looking at the screen)
+
+##### Question Data
+ - Questions_id - a unique ID# assigned to each question/prompt (36 overall)
+ - Cog_Load - from 1-6, corresponding to the perceived cognitive demands of the task (based on Bloom's Taxonomy). We have issues with how these labels were assigned, and there are general issues with Bloom's Taxonomy. The numbers should be considered as discrete tasks, not as a continuum. Use with caution.
+ - QuestionText - ext string of the question/prompt presented to the user
+
+##### Typing Data
+ - UserID - a unique ID# assigned to each subject
+ - QuestionID - a unique ID# assigned to each question/prompt (36 overall)
+ - CogLoad - from 1-6, corresponding to the perceived cognitive demands of the task
+ - Token - text of the word being typed
+ - TokenLength - number of visible characters in token
+ - KeystrokeCount - number of keystrokes used to produce token
+ - StartTime - relative time that token production began, from the beginning of the repsonse
+ - EndTime - relative time that token production ended, from the beginning of the repsonse
+ - VisKSTimes - List of keypress times for each visible keystroke in the token (i.e. excluding function keys, etc.)
+ - RevisCount - number of backspaces or deletes during token production
+ - POS - part of speech tag (using Penn Treebank notation)
 
 #### Bibliography
 
