@@ -1,6 +1,5 @@
 ### TypeShift: A User Interface for Visualizing the Typing Production Process
-
-https://angoodkind.shinyapps.io/TypeShift/
+### https://angoodkind.shinyapps.io/TypeShift/
 
 #### Introduction
 The task of “visualizing language production” is both broad and difficult to execute conclusively. Common visualizations relating to language production include word clouds and frequency counts. These summary visualizations, however, only provide a static picture of language. They do not capture the dynamics elements that go into the process of language production, however.
