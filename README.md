@@ -56,7 +56,7 @@ TypeShift attempts to synthesize the best aspects of the visualization technique
 #### Methodology
 The typing data was collected from 486 Louisiana Tech students. The participants reported themselves to be 41.3% female, 56.4% male and 88.3% right-handed and 9.1% left-handed. (These do not sum to 100%; on each question some percentage of participants chose not to respond to one or more of the demographic questions.) 
 
-##### Data Collection
+#### Data Collection
 
 The participants were seated at a Dell desktop with a QWERTY keyboard and presented with a series of prompts in Standard American English. The participant was required to type at least 300 characters in response to each prompt, at which time the participant was presented with a button allowing him or her to proceed to the next prompt. Each participant responded to 10-12 prompts. Prompts were presented in random orders, though there was an equal distribution of tasks for each level of cognitive effort. The average response contains 921 keystrokes; the final response contained an average of 448 characters and 87 words. A keylogger with 15.625 milliseconds clock resolution was used to record text and keystroke event timestamps (Locklear et al., 2014). 
 
@@ -64,7 +64,7 @@ Each prompt was drawn from one of six tasks: Remember, Understand, Apply, Analyz
 
 It should be noted that the cognitive effort measure of a prompt is most accurately interpreted as the expected cognitive demands as hypothesized by Bloom’s Taxonomy. It is possible or even likely that some participants may experience different cognitive loads than would be expected by a given prompt. For example, a participant may choose to create new knowledge (e.g., making up his or her favorite movie), rather than retrieve a memory in responding to a Remember prompt. Additionally, a participant may have experiences that are relevant to a Create prompt (e.g., having written a film script); this may lead to a response which is based more on recall than creative thought. 
 
-## Preprocessing
+#### Preprocessing
 
 The stream of typing data was clustered into word tokens using the Stanford CoreNLP (Manning et al., 2014) parser. Each word token was annotated with its part of speech and semantic role. The semantic role is of interest because psychologists such as James Pennebaker (Chung & Pennebaker, 2007) posit that function words, e.g. you, the, it or them, are particularly psychologically informative. This is in contrast to the traditional view that content words, e.g. red, fast, smack or mug, contain the most amount of cognitive information. In addition, the start time and end time of each token was recorded, along with the keystrokes that comprise each token.
 
