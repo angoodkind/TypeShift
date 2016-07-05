@@ -1,5 +1,5 @@
-### TypeShift: A User Interface for Visualizing the Typing Production Process
-### https://angoodkind.shinyapps.io/TypeShift/
+# TypeShift: A User Interface for Visualizing the Typing Production Process
+# https://angoodkind.shinyapps.io/TypeShift/
 
 ## Contents
  - [Introduction](#introduction)
@@ -11,7 +11,7 @@
  - [Guide to Source Code and Data](#guide-to-source-code-and-data)
  - [Bibliography](#bibliography)
 
-#### Introduction
+## Introduction
 The task of “visualizing language production” is both broad and difficult to execute conclusively. Common visualizations relating to language production include word clouds and frequency counts. These summary visualizations, however, only provide a static picture of language. They do not capture the dynamics elements that go into the process of language production, however.
 
 Capturing the dynamics of language production is important because information is transmitted in language not only via the words chosen, but also by tone of voice, pauses and slips of the tongue. Therefore, in order to accurately study language production, a researcher not only needs a record of the words that were produced, but also a record of how they were produced.
@@ -33,7 +33,7 @@ Answers to these questions can be useful in tasks such as training a machine lea
 
 Finally, by being able to compare different trends, look at only certain linguistic elements and then be able to see the details of just one token, the TypeShift tool follow’s Ben Shneiderman’s mantra, “Overview first, zoom and filter, then details-on-demand.” (Shneiderman, 1996)
 
-#### Background
+## Background
 
 Keystroke dynamics is the science of capturing the detailed timing information of a typist’s keystrokes (Moskovitch, 2009). This timing information can vary from a parameter as large as the overall mean typing rate to a metric as minute as the pause time between two particular keys. The details of a typing session can help predict many personal properties, from overall identity authentication (Ali, et al. 2015, and sources within) to emotion and cognition prediction (Epp, et al, 2011).
 
@@ -64,13 +64,13 @@ Each prompt was drawn from one of six tasks: Remember, Understand, Apply, Analyz
 
 It should be noted that the cognitive effort measure of a prompt is most accurately interpreted as the expected cognitive demands as hypothesized by Bloom’s Taxonomy. It is possible or even likely that some participants may experience different cognitive loads than would be expected by a given prompt. For example, a participant may choose to create new knowledge (e.g., making up his or her favorite movie), rather than retrieve a memory in responding to a Remember prompt. Additionally, a participant may have experiences that are relevant to a Create prompt (e.g., having written a film script); this may lead to a response which is based more on recall than creative thought. 
 
-##### Preprocessing
+## Preprocessing
 
 The stream of typing data was clustered into word tokens using the Stanford CoreNLP (Manning et al., 2014) parser. Each word token was annotated with its part of speech and semantic role. The semantic role is of interest because psychologists such as James Pennebaker (Chung & Pennebaker, 2007) posit that function words, e.g. you, the, it or them, are particularly psychologically informative. This is in contrast to the traditional view that content words, e.g. red, fast, smack or mug, contain the most amount of cognitive information. In addition, the start time and end time of each token was recorded, along with the keystrokes that comprise each token.
 
 In order to allow for typing sessions of different time lengths to be compared, the elapsed time of each typing session was normalized and converted to the proportion of a complete session, i.e. 0.0 – 1.0. Similarly, the typing rate for each token (# of keystrokes/token time span) was normalized and converted to a z-score, to allow for comparison across typists. By normalizing the typing rate, a visualization can shed light on not only whether a typist is typing rapidly overall, but also rapidly for himself or herself.
 
-#### TypeShift User Interface
+## TypeShift User Interface
 
 The TypeShift tool was designed using the shiny Web Application Interface for R (Chang, et al. 2016). This allows for rapid prototyping as well as rapid deployment. The tool allows a user to select exactly which typing session to visualize, as well as which aspects of a typing session to include in the visualization.
 
@@ -94,7 +94,7 @@ The main plot charts the total number of keystrokes produced versus the proporti
 
 Finally, a user can click on a particular token to see a detailed view of that token’s timing. The pause before each character is displayed as a red point for that particular instance, as well as in a box plot for the overall distribution of pauses. In this way, a user can visualize how a typist produces a specific word, relative to other typist’s producing the same word.
 
-#### Illustrative Examples
+## Illustrative Examples
 
 The advantages of the TypeShift tool can be understood better through example. The examples below highlight how TypeShift can bring to light certain key attributes of a typist or typing session.
 
@@ -154,7 +154,7 @@ Finally, a user of TypeShift can zoom into a particular word token. The red scat
 
 *Figure 12 - Pre-character pauses for each keystroke in the token "these"*
 
-#### Conclusion
+## Conclusion
 
 The TypeShift user interface aims to provide a dynamic tool to visualize both the continuous and discrete nature of the language production process. Language production is both a stream of flowing words, as well as a series of separate word tokens. By allowing a user to capture both the holistic process as a single linear progression, as well as highlighting individual characteristics of each particular token, the tool can help a user understand both aspects. 
 
@@ -162,11 +162,11 @@ Further, it is often difficult and counterproductive to attempt to use a single 
 
 Ultimately, the goal of understanding language production is to understand how the mind categorizes and processes information. By allowing a user to better visualize and compare typing sessions, hopefully more rapid progress can be made towards conceptualizing information transmission.
 
-##### Acknowledgements
+## Acknowledgements
 
 Raw data for this project was collected and rigorously sanitized by Lousisiana Tech University. In particular, this was orchestrated by Dr. Vir Proha, Dr. Kiran Balagani (NYIT) and Dr. Mike O'Neal. This work was supported in part by DARPA Active Authentication grants FA8750-12-2-0201 and FA8750-13-2-0274. The views, findings, recommendations, and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies or endorsements, either expressed or implied, of the sponsoring agencies or the U.S. Government.
 
-#### Guide to Source Code and Data
+## Guide to Source Code and Data
 
 The Shiny app consists of the standard three R files, `global.R`, `server.R` and `ui.R`. These are used in a conventional format, and relatively unexceptional.
 
@@ -176,12 +176,12 @@ Information about the typing data as well as the questions/answers and subject d
  - user_data.csv - information avout each user, as outline below; use subject_id to cross-reference
  - question_data.csv - data about the questions/prompts that were presented to the users; use question_id for cross-referencing
 
-##### Answer Data
+### Answer Data
  - Subject_id - a unique ID# assigned to each subject
  - Questions_id - a unique ID# assigned to each question/prompt (30 in total)
  - FinalText - The text string of the user's answer
 
-##### User Data
+### User Data
  - Subject_id - a unique ID# assigned to each subject
  
 [For all of the below, some are blank, as subject's chose not to answer]
@@ -196,12 +196,12 @@ Information about the typing data as well as the questions/answers and subject d
  - AvgHoursTyping - 0-1, 2-4, 5-7, 8-12, 12+ [note: this tends to correlate with typing speed]
  - VisualTypist - "y" or "n", whether they look at their hands when typing (as opposed to looking at the screen)
 
-##### Question Data
+### Question Data
  - Questions_id - a unique ID# assigned to each question/prompt (36 overall)
  - Cog_Load - from 1-6, corresponding to the perceived cognitive demands of the task (based on Bloom's Taxonomy). We have issues with how these labels were assigned, and there are general issues with Bloom's Taxonomy. The numbers should be considered as discrete tasks, not as a continuum. Use with caution.
  - QuestionText - ext string of the question/prompt presented to the user
 
-##### Typing Data
+### Typing Data
  - UserID - a unique ID# assigned to each subject
  - QuestionID - a unique ID# assigned to each question/prompt (36 overall)
  - CogLoad - from 1-6, corresponding to the perceived cognitive demands of the task
@@ -214,7 +214,7 @@ Information about the typing data as well as the questions/answers and subject d
  - RevisCount - number of backspaces or deletes during token production
  - POS - part of speech tag (using Penn Treebank notation)
 
-#### Bibliography
+## Bibliography
 
 Ali, M.L., Monaco, J.V., Qiu, M., & Tappert, C.C.. (2015). Authentication and Identification Methods Used in Keystroke Biometric Systems. HPCC.
 
