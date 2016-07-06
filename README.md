@@ -1,5 +1,6 @@
 # TypeShift: A User Interface for Visualizing the Typing Production Process
 # https://angoodkind.shinyapps.io/TypeShift/
+![](http://i.imgur.com/By5Q9hH.png "UI")
 
 ## Contents
  - [Introduction](#introduction)
